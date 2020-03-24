@@ -37,11 +37,10 @@ if(isset($_GET["id"])) {
 <a href="index.php"> Return </a>
 <?php
 foreach($series as $row) { ?>
-    <h1> <?php
+    <?php
         echo $row["title"] . ' - ';
         echo $row["rating"] . ' ';
-        ?>
-    </h1>
+     ?>
     <form action="seriesUpdate.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $_GET["id"] ?>">
 
